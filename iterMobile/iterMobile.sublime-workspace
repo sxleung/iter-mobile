@@ -1,0 +1,439 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"onGetLocation"
+			],
+			[
+				"flex",
+				"flex-start"
+			],
+			[
+				"start",
+				"startdate"
+			],
+			[
+				"st",
+				"stringToDate"
+			],
+			[
+				"ica",
+				"icalendar"
+			],
+			[
+				"splash_gest",
+				"splash_event_guests"
+			],
+			[
+				"splash_event",
+				"splash_event_guests"
+			],
+			[
+				"splash_eve",
+				"splash_events"
+			],
+			[
+				"send",
+				"sendMessageToSlackResponseURL"
+			],
+			[
+				"splash",
+				"splash_event_list"
+			],
+			[
+				"slac",
+				"slack_resp_url"
+			],
+			[
+				"splash_events_",
+				"splash_event_guests"
+			],
+			[
+				"spl",
+				"splash_access_token"
+			],
+			[
+				"splas",
+				"splash_event_list"
+			],
+			[
+				"init",
+				"initialize_splash"
+			],
+			[
+				"tok",
+				"req_tok_promise"
+			],
+			[
+				"splash_re",
+				"splash_refresh_token"
+			],
+			[
+				"splash_",
+				"splash_access_token"
+			],
+			[
+				"even",
+				"event_list_promise"
+			],
+			[
+				"eve",
+				"event_list_promise"
+			],
+			[
+				"req",
+				"req_tok_promise"
+			],
+			[
+				"splash_e",
+				"splash_event_list"
+			],
+			[
+				"sp",
+				"splash_access_token"
+			],
+			[
+				"ref",
+				"refresh_token"
+			],
+			[
+				"access",
+				"access_token"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"client",
+				"client_id"
+			],
+			[
+				"splash_cli",
+				"splash_client_id"
+			],
+			[
+				"cli",
+				"client_id"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "import React, { Component } from 'react';\nimport { Alert, AppRegistry, SectionList, StyleSheet, Text, View, Button} from 'react-native';\n\n\nexport default class Appointment extends Component {\n\n  selectionList = () => {\n    return([\n            {title: 'Today', data: ['Devin']},\n            {title: 'Tomorrow', data: ['Jackson', 'James', 'Jillian', 'Jimmy', 'Joel', 'John', 'Julie']},\n            {title: 'Upcoming', data: ['Kackson', 'Kames', 'Killian', 'Kimmy', 'Koel', 'Kohn', 'Kulie']},\n            {title: 'Someday', data: ['Kackson', 'Kames', 'Killian', 'Kimmy', 'Koel', 'Kohn', 'Kulie']},\n    ])\n  }\n\n  render() {\n    return (\n      <View style={styles.container}>\n        <SectionList\n          renderItem={({item}) => <Text style={styles.item}>{item}</Text>}\n          renderSectionHeader={({section}) => \n            <Button \n              title={section.title} \n              style={styles.sectionHeader}\n              onPress={() => {\n                Alert.alert('You tapped '+section.title+'!');\n              }}>\n              {section.title}\n            </Button>}\n          keyExtractor={(item, index) => index}\n          sections={this.selectionList()}\n        />\n      </View>\n    );\n  }\n}\n\nconst styles = StyleSheet.create({\n  container: {\n   flex: 1,\n   paddingTop: 22\n  },\n  sectionHeader: {\n    paddingTop: 2,\n    paddingLeft: 10,\n    paddingRight: 10,\n    paddingBottom: 2,\n    fontSize: 14,\n    fontWeight: 'bold',\n    backgroundColor: 'rgba(247,247,247,1.0)',\n  },\n  item: {\n    padding: 10,\n    fontSize: 18,\n    height: 44,\n  },\n})\n\n// skip this line if using Create React Native App\n// AppRegistry.registerComponent('AwesomeProject', () => SectionListBasics);\n",
+			"file": "modules/AppointmentList.js",
+			"file_size": 1688,
+			"file_write_time": 131762471542467968,
+			"settings":
+			{
+				"buffer_size": 1688,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "import React, { Component } from 'react';\nimport { Alert, AppRegistry, SectionList, StyleSheet, Text, View, Button} from 'react-native';\n\nexport default class Appointment extends Component {\n\n  selectionList = () => {\n    return([\n            {title: 'Today', data: ['Devin']},\n            {title: 'Tomorrow', data: ['Jackson', 'James', 'Jillian', 'Jimmy', 'Joel', 'John', 'Julie']},\n            {title: 'Upcoming', data: ['Kackson', 'Kames', 'Killian', 'Kimmy', 'Koel', 'Kohn', 'Kulie']},\n            {title: 'Someday', data: ['Kackson', 'Kames', 'Killian', 'Kimmy', 'Koel', 'Kohn', 'Kulie']},\n    ])\n  }\n\n  render() {\n    return (\n      <View style={styles.container}>\n        <SectionList\n          renderItem={({item}) => <Text style={styles.item}>{item}</Text>}\n          renderSectionHeader={({section}) => \n            <Button \n              title={section.title} \n              style={styles.sectionHeader}\n              onPress={() => {\n                Alert.alert('You tapped '+section.title+'!');\n              }}>\n              {section.title}\n            </Button>}\n          keyExtractor={(item, index) => index}\n          sections={this.selectionList()}\n        />\n      </View>\n    );\n  }\n}\n\nconst styles = StyleSheet.create({\n  container: {\n   flex: 1,\n   paddingTop: 22\n  },\n  sectionHeader: {\n    paddingTop: 2,\n    paddingLeft: 10,\n    paddingRight: 10,\n    paddingBottom: 2,\n    fontSize: 14,\n    fontWeight: 'bold',\n    backgroundColor: 'rgba(247,247,247,1.0)',\n  },\n  item: {\n    padding: 10,\n    fontSize: 18,\n    height: 44,\n  },\n})\n\n// skip this line if using Create React Native App\n// AppRegistry.registerComponent('AwesomeProject', () => SectionListBasics);\n",
+			"file": "App.js",
+			"file_size": 1687,
+			"file_write_time": 131762468507774216,
+			"settings":
+			{
+				"buffer_size": 1687,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/sleung/Desktop/Iter/git/react-native-background-geolocation-example/index.js",
+			"settings":
+			{
+				"buffer_size": 263,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: B",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control:",
+				"Package Control: Enable Package"
+			],
+			[
+				"pack",
+				"Package Control: Add Channel"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 488.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/sleung/Desktop/Iter/git/iter-mobile/iterMobile"
+	],
+	"file_history":
+	[
+		"/Users/sleung/Desktop/Iter/git/iter-mobile/iterMobile/iterMobile.sublime-project",
+		"/Users/sleung/Desktop/Iter/git/iter-mobile/iterMobile/App.js",
+		"/Users/sleung/Desktop/Iter/git/iter-mobile/iterMobile/node_modules/metro/src/lib/polyfills/require.js",
+		"/Users/sleung/Desktop/101/react-native-android/AwesomeProject/components/FetchLocation.js",
+		"/Users/sleung/Desktop/101/react-native-android/AwesomeProject/App.js",
+		"/Users/sleung/Desktop/101/react-native/helloWorld/App.js",
+		"/Users/sleung/Desktop/101/react-native/react-native-hello-world/App.js",
+		"/Users/sleung/Desktop/Iter/ixo/ixo-pds/package.json",
+		"/Users/sleung/Desktop/slackapp/index.js",
+		"/Users/sleung/Desktop/splashiCal/index.js",
+		"/Users/sleung/Desktop/icalendar/index.js",
+		"/Users/sleung/Downloads/node-icalendar-master/index.js",
+		"/Users/sleung/Downloads/node-icalendar-master/spec/icalendar-spec.js",
+		"/Users/sleung/Downloads/node-icalendar-master/README.md",
+		"/Users/sleung/Downloads/node-icalendar-master/package.json",
+		"/Users/sleung/Downloads/node-icalendar-master/AUTHORS.txt",
+		"/Users/sleung/Downloads/node-icalendar-master/examples/invite-reply.js",
+		"/Users/sleung/Downloads/Splash Prod.postman_environment.json",
+		"/Users/sleung/Desktop/index.js"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "modules/AppointmentList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1688,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137,
+								137
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 407.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "App.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								946,
+								1007
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/sleung/Desktop/Iter/git/react-native-background-geolocation-example/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 263,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "iterMobile.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 240.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
